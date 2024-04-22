@@ -1,0 +1,18 @@
+{
+    "version": "7.0.0032",
+    "description": "The Industry’s Most Powerful SSH Client",
+    "homepage": "https://www.xshell.com/en/xshell-plus-download",
+    "license": "BSD-3-Clause",
+    "url": "http://localhost:5244/d/D/Portable/software/xshellplus.7z?sign=Tn9SAcpPW1qxX3wyqedpDtk8OYW-YX69aHfnB5f3dxg=:0#/dl.7z",
+    "hash": "0881607faa4bb770d6c65fd3bb8280241141646995ebd09a390b72946e0ed322",
+    "shortcuts": [
+        [
+            "Xshell.exe",
+            "Xshell"
+        ],
+        [
+            "Xftp.exe",
+            "Xftp"
+        ]
+    ]
+}
