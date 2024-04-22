@@ -1,0 +1,38 @@
+{
+    "version": "3.25.11.412",
+    "description": "Tencent Meeting provides one-stop audio and video conferencing solutions.",
+    "homepage": "https://meeting.tencent.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://meeting.tencent.com/declare.html"
+    },
+    "notes": "We don't persist your Tencent Meeting data, they are still storaged in \"$env:APPDATA\\Tencent\\WeMeet\".",
+    "url": "https://updatecdn.meeting.qq.com/cos/92ea898a6f074d27b5c721c9c9a89590/TencentMeeting_0300000000_3.25.11.412_x86_64.publish.exe#/dl.7z",
+    "hash": "5e470832ea64631d3e547b97a57b6f50a1a29f6c67d0eb456db315d3ad23a8bb",
+    "post_install": [
+        "Rename-Item \"$dir\\`$_22_\" \"$dir\\$version\"",
+        "Remove-Item \"$dir\\$*\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "Remove-Item \"$dir\\wemeetapp_new.exe\" -Force -ErrorAction SilentlyContinue",
+        "create_startmenu_shortcuts $manifest $dir\\..\\$version $global $arch"
+    ],
+    "bin": [
+        [
+            "wemeetapp.exe",
+            "tencent-meeting"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "wemeetapp.exe",
+            "Tencent Meeting"
+        ]
+    ],
+    "checkver": {
+        "url": "https://meeting.tencent.com/wemeet-webapi/v2/config/query-download-info",
+        "script": "(Invoke-WebRequest -Body '[{\"instance\":\"windows\",\"type\":\"0300000000\"}]' -Method 'POST' -Uri $url).Content",
+        "regex": "https://(?<url>.*?\\.exe).*?version\".*?\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://$matchUrl#/dl.7z"
+    }
+}
