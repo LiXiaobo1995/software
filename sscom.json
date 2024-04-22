@@ -1,0 +1,15 @@
+{
+    "version": "5.13.1",
+    "description": "SSCOM 是一款常用于串口通信的串口调试工具，通常用于 Windows 操作系统。",
+    "homepage": "http://www.daxia.com",
+    "license": "Unknown",
+    "url": "http://www.daxia.com/sscom/sscom5.13.1.rar#/dl.7z",
+    "hash": "b7ea152f4028d72c3eb978828150442435eb10175ea76bdfafad19f6a8deab47",
+    "bin": "sscom5.13.1.exe",
+    "shortcuts": [
+        [
+            "sscom5.13.1.exe",
+            "sscom"
+        ]
+    ],
+}
