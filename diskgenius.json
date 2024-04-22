@@ -14,7 +14,6 @@
         }
     },
     "extract_dir": "DiskGenius",
-    "pre_install": "if (!(Test-Path \"$persist_dir\\Options.ini\")) { New-Item \"$dir\\Options.ini\" | Out-Null }",
     "bin": "DiskGenius.exe",
     "shortcuts": [
         [
@@ -22,7 +21,6 @@
             "DiskGenius"
         ]
     ],
-    "persist": "Options.ini",
     "checkver": {
         "url": "https://www.diskgenius.com/download.php",
         "regex": "Version: ([\\d.]+)"
