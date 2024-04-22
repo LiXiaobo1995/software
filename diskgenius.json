@@ -3,17 +3,8 @@
     "description": "Utility for data recovery, disk partition management, backup & restore",
     "homepage": "https://www.diskgenius.com",
     "license": "Unknown",
-    "architecture": {
-        "64bit": {
-            "url": "https://raw.githubusercontent.com/LiXiaobo1995/software/main/DiskGenius5501488.zip",
-            "hash": "8b319734bc519cf85b569e51d41b14b8aff57c7227525a0c1a93c628f44c6299"
-        },
-        "32bit": {
-            "url": "https://download2.eassos.com/DGEng5511508_x86.zip",
-            "hash": "1f797218e2a57ec7b7a05445ae5df6bc06511a466255c394e9b32b3007204c63"
-        }
-    },
-    "extract_dir": "DiskGenius",
+    "url": "https://raw.githubusercontent.com/LiXiaobo1995/software/main/DiskGenius5501488.zip",
+    "hash": "8b319734bc519cf85b569e51d41b14b8aff57c7227525a0c1a93c628f44c6299",
     "bin": "DiskGenius.exe",
     "shortcuts": [
         [
@@ -21,18 +12,4 @@
             "DiskGenius"
         ]
     ],
-    "checkver": {
-        "url": "https://www.diskgenius.com/download.php",
-        "regex": "Version: ([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download2.eassos.com/DGEng$cleanVersion_x64.zip"
-            },
-            "32bit": {
-                "url": "https://download2.eassos.com/DGEng$cleanVersion_x86.zip"
-            }
-        }
-    }
 }
